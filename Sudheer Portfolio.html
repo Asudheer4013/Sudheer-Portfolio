@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sudheer Kumar Reddy Arem — Software Engineer Portfolio</title>
+  <meta name="description" content="Portfolio of Sudheer Kumar Reddy Arem — Associate Engineer. Projects, skills, experience, contact, and location in one fast, accessible page." />
+  <meta name="keywords" content="Sudheer Kumar Reddy Arem, software engineer, portfolio, web developer, projects, resume, map" />
+  <meta name="color-scheme" content="light dark" />
+  <meta property="og:title" content="Sudheer Kumar Reddy Arem — Portfolio" />
+  <meta property="og:description" content="Projects, skills, experience, and contact in one fast, accessible page." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'%3E%3Crect width='100%25' height='100%25' fill='%231e293b'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji' font-size='48'%3ESudheer%20Kumar%20Reddy%20Arem%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231e293b'/%3E%3Ctext x='50%25' y='50%25' dy='.1em' text-anchor='middle' font-size='28' font-family='Segoe UI, Roboto, Helvetica, Arial, sans-serif' fill='white'%3ESK%3C/text%3E%3C/svg%3E" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji; line-height: 1.6; color: var(--text); background: var(--bg); }
+    :root { --bg:#0b1220; --surface:#111827; --muted:#374151; --text:#e5e7eb; --text-dim:#cbd5e1; --brand:#60a5fa; --brand-2:#22d3ee; --chip:#0f172a; --shadow:0 10px 30px rgba(0,0,0,.25); --radius:14px; --maxw:1160px; --ring:0 0 0 3px rgba(96,165,250,.35); }
+    .light { --bg:#f8fafc; --surface:#ffffff; --muted:#e5e7eb; --text:#0f172a; --text-dim:#475569; --chip:#eef2ff; --shadow:0 8px 24px rgba(2,6,23,.08); }
+    a { color: var(--brand); text-decoration: none; } a:hover { text-decoration: underline; }
+    .container { width: min(100% - 2rem, var(--maxw)); margin-inline: auto; }
+    .grid { display: grid; gap: 1.25rem; }
+    .cols-2 { grid-template-columns: repeat(2, 1fr); }
+
+    /* HEADER */
+    header { position: sticky; top: 0; z-index: 1000; backdrop-filter: saturate(180%) blur(12px); background: color-mix(in oklab, var(--bg) 80%, transparent); border-bottom: 1px solid color-mix(in oklab, var(--muted) 50%, transparent); }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: .8rem 0; gap: .75rem; }
+    .brand { display: flex; align-items: center; gap: .6rem; color: var(--text); font-weight:700; flex:1 1 auto; min-width:0; }
+    .brand-badge { width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); display: grid; place-items: center; color: #0b1220; font-weight: 900; flex-shrink:0; }
+    .brand-name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 50vw; }
+    nav { flex: 0 1 auto; }
+    nav ul { display: flex; align-items:center; gap: .7rem; list-style:none; margin:0; padding:0; }
+    nav a { color: var(--text); opacity:.9; padding:.5rem .7rem; border-radius:8px; white-space:nowrap; }
+    nav a.active, nav a:hover { background: color-mix(in oklab, var(--brand) 18%, transparent); text-decoration:none; }
+    .actions { display:flex; gap:.5rem; align-items:center; flex-shrink:0; }
+
+    .btn { display: inline-flex; align-items: center; gap: .55rem; padding: .58rem .9rem; border-radius: 10px; border: 1px solid color-mix(in oklab, var(--brand) 35%, var(--muted)); background: linear-gradient(180deg, color-mix(in oklab, var(--surface) 80%, transparent), color-mix(in oklab, var(--surface) 100%, transparent)); color: var(--text); box-shadow: var(--shadow); cursor: pointer; white-space: nowrap; }
+    .btn:hover { filter: brightness(1.06); text-decoration: none; }
+    .btn.secondary { background: var(--chip); border-color: transparent; box-shadow: none; }
+    .icon { width: 18px; height: 18px; display: inline-block; flex-shrink:0; }
+
+    /* HERO */
+    .hero { padding: 4.5rem 0 2rem; }
+    .hero-wrap { display: grid; gap: 2rem; grid-template-columns: minmax(0,1fr) auto; align-items: center; }
+    .title { font-size: clamp(1.8rem, 2.2rem + 1vw, 3rem); margin: 0 0 .5rem; }
+    .subtitle { color: var(--text-dim); margin: 0 0 1rem; }
+    .chips { display:flex; flex-wrap:wrap; gap:.5rem; margin-top: 1rem; }
+    .chip { padding:.4rem .7rem; border-radius:999px; background:var(--chip); color:var(--text); border:1px solid color-mix(in oklab, var(--muted) 40%, transparent); font-size:.9rem; }
+    .hero-cta { display:flex; gap:.75rem; align-items:center; flex-wrap:wrap; margin-top:1.2rem; }
+
+    /* AVATAR — bigger, centered */
+    .avatar { width: 300px; height: 300px; border-radius: 28px; background: radial-gradient(160px 160px at 30% 30%, color-mix(in oklab, var(--brand) 35%, transparent), transparent), linear-gradient(135deg, color-mix(in oklab, var(--brand) 25%, var(--surface)), var(--surface)); display:grid; place-items:center; border:1px solid color-mix(in oklab, var(--muted) 55%, transparent); box-shadow: var(--shadow); overflow:hidden; justify-self: center; }
+    .avatar img { width:100%; height:100%; object-fit:cover; display:none; }
+    .avatar svg { width:70%; height:70%; }
+
+    .socials { display:flex; gap:.6rem; margin-top:.8rem; flex-wrap:wrap; }
+    .socials a { display:inline-flex; align-items:center; gap:.45rem; padding:.5rem .7rem; border-radius:10px; background:var(--chip); color:var(--text); border:1px solid color-mix(in oklab, var(--muted) 30%, transparent); }
+
+    section { padding: 3rem 0; }
+    section .h2 { font-size: clamp(1.2rem, 1rem + 1vw, 1.8rem); margin: 0 0 .25rem; }
+    .section-sub { color: var(--text-dim); margin: 0 0 1.5rem; }
+
+    /* FORMS (contact styling) */
+    label { display: grid; gap: .35rem; }
+    label > span { font-weight: 600; font-size: .9rem; color: var(--text-dim); }
+    input, textarea, select { width: 100%; padding: .7rem .8rem; background: var(--surface); color: var(--text); border: 1px solid color-mix(in oklab, var(--muted) 50%, transparent); border-radius: 10px; }
+    input::placeholder, textarea::placeholder { color: color-mix(in oklab, var(--text-dim) 75%, transparent); }
+    input:focus, textarea:focus, select:focus, .btn:focus { outline: none; box-shadow: var(--ring); }
+    textarea { min-height: 160px; resize: vertical; }
+
+    /* CARDS/TAGS */
+    .card { background: var(--surface); border: 1px solid color-mix(in oklab, var(--muted) 50%, transparent); border-radius: var(--radius); padding: 1rem; box-shadow: var(--shadow); }
+    .tags { display:flex; flex-wrap:wrap; gap:.5rem; }
+    .tag { background:var(--chip); border:1px solid color-mix(in oklab, var(--muted) 40%, transparent); color:var(--text); padding:.35rem .55rem; border-radius:8px; font-size:.9rem; }
+
+    /* TIMELINE */
+    .timeline { position:relative; margin:1rem 0; }
+    .timeline::before { content:""; position:absolute; top:0; bottom:0; left:10px; width:2px; background: color-mix(in oklab, var(--muted) 60%, transparent); }
+    .tl-item { position:relative; padding-left:2.5rem; margin:1.25rem 0; }
+    .tl-bullet { position:absolute; left:3px; top:.3rem; width:16px; height:16px; border-radius:50%; background: linear-gradient(135deg, var(--brand), var(--brand-2)); border: 2px solid var(--bg); box-shadow: 0 0 0 4px color-mix(in oklab, var(--brand) 30%, transparent); }
+
+    /* PROJECTS */
+    .filters { display:flex; gap:.5rem; flex-wrap:wrap; margin-bottom:1rem; }
+    .filter { padding:.45rem .7rem; border-radius:999px; border:1px solid color-mix(in oklab, var(--muted) 45%, transparent); background:var(--chip); color:var(--text); cursor:pointer; }
+    .filter[aria-pressed="true"], .filter.active { background: linear-gradient(135deg, color-mix(in oklab, var(--brand) 25%, var(--chip)), var(--chip)); border-color: color-mix(in oklab, var(--brand) 45%, var(--muted)); }
+    .projects { display:grid; grid-template-columns: repeat(3, 1fr); gap:1rem; }
+    .projects > [hidden] { display: none !important; }
+    .proj .thumb { aspect-ratio: 16 / 9; border-radius: 12px; background: linear-gradient(160deg, color-mix(in oklab, var(--brand) 15%, var(--surface)), var(--surface)); border:1px solid color-mix(in oklab, var(--muted) 45%, transparent); display:grid; place-items:center; color:var(--text-dim); font-weight:600; }
+    .proj .links { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.4rem; }
+
+    /* MAP */
+    .map-wrap { position:relative; border-radius:14px; overflow:hidden; border:1px solid color-mix(in oklab, var(--muted) 45%, transparent); box-shadow: var(--shadow); }
+    .map-wrap iframe { width:100%; height:380px; border:0; display:block; }
+
+    /* FOOTER */
+    footer { border-top:1px solid color-mix(in oklab, var(--muted) 45%, transparent); padding:2rem 0; color:var(--text-dim); }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .brand-name { max-width: 40vw; }
+      .avatar { width: 260px; height: 260px; }
+    }
+    @media (max-width: 900px) {
+      .hero-wrap { grid-template-columns: 1fr; }
+      .avatar { width: 240px; height: 240px; }
+      .projects { grid-template-columns: repeat(2, 1fr); }
+      nav ul { flex-wrap: wrap; justify-content:flex-end; }
+    }
+    @media (max-width: 640px) {
+      .projects { grid-template-columns: 1fr; }
+      .brand-name { max-width: 55vw; }
+      .cols-2 { grid-template-columns: 1fr; }
+      .avatar { width: 200px; height: 200px; }
+    }
+    @media print { header, .hero-cta, .socials, .filters, .proj .links, dialog, footer, #backToTop, #settingsBtn, #settings { display:none!important; } body{ background:#fff; color:#111; } .card,.chip,.tag{ box-shadow:none; } }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand-badge" aria-hidden="true">SK</span>
+        <span class="brand-name">Sudheer Kumar Reddy Arem</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="actions">
+        <button id="settingsBtn" class="btn secondary" aria-label="Edit profile"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.4 13a7.9 7.9 0 0 0 0-2l2-1.6-2-3.4-2.5.8a8 8 0 0 0-1.7-1l-.3-2.6H9.1l-.3 2.6a8 8 0 0 0-1.7 1L4.6 6l-2 3.4L4.6 11a7.9 7.9 0 0 0 0 2l-2 1.6 2 3.4 2.5-.8a8 8 0 0 0 1.7 1l.3 2.6h5.8l.3-2.6a8 8 0 0 0 1.7-1l2.5.8 2-3.4Z"/><circle cx="12" cy="12" r="3.2"/></svg><span>Edit</span></button>
+        <button id="themeToggle" class="btn secondary" aria-label="Toggle theme"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg><span>Theme</span></button>
+        <button class="btn" onclick="window.print()"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 9V3h12v6M6 17H4v-6h16v6h-2m-2 0v4H8v-4"/></svg><span>Print</span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="top" class="hero">
+    <div class="container hero-wrap">
+      <div>
+        <h1 class="title">Hi, I’m <span style="color:var(--brand)">Sudheer Kumar Reddy A</span> — <span class="nowrap">Associate Engineer</span> building reliable web & cloud solutions.</h1>
+        <p class="subtitle">I enjoy crafting pragmatic, performant software with clean architecture, strong testing, and delightful UX. I work across the stack: from RESTful APIs and data pipelines to responsive front‑ends.</p>
+        <div class="chips">
+          <span class="chip">TypeScript</span><span class="chip">React</span><span class="chip">Node.js</span><span class="chip">.NET</span><span class="chip">SQL</span><span class="chip">Azure</span><span class="chip">Docker</span><span class="chip">CI/CD</span>
+        </div>
+        <div class="hero-cta">
+          <a class="btn" href="#projects" id="btnProjects" title="View Projects">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 3h8v8H3V3Zm10 0h8v8h-8V3ZM3 13h8v8H3v-8Zm10 0h8v8h-8v-8Z"/></svg>
+            <span>View Projects</span>
+          </a>
+          <a class="btn secondary" href="#contact" id="btnContact" title="Contact">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 6h18v12H3V6Zm9 6L3 7v10h18V7l-9 5Z"/></svg>
+            <span>Contact</span>
+          </a>
+        </div>
+        <div id="socials" class="socials" aria-label="Social links"></div>
+      </div>
+      <div class="avatar" aria-hidden="true">
+        <img id="avatarImg" alt="Profile picture" />
+        <svg id="avatarFallback" viewBox="0 0 128 128" role="img" aria-label="Avatar placeholder">
+          <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#22d3ee"/></linearGradient></defs>
+          <rect width="128" height="128" rx="28" fill="url(#g)" opacity=".15"/>
+          <circle cx="64" cy="50" r="26" fill="url(#g)"/>
+          <rect x="22" y="88" width="84" height="38" rx="20" fill="url(#g)"/>
+          <text x="64" y="120" font-size="16" text-anchor="middle" fill="currentColor">SKR A</text>
+        </svg>
+      </div>
+    </div>
+  </main>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container grid cols-2">
+      <div class="card">
+        <h2 class="h2">About</h2>
+        <p>I’m a software engineer focused on building scalable, secure, and maintainable applications. I value clean code, thoughtful abstractions, and reliable automation. Currently exploring cloud‑native patterns, observability, and data‑driven product decisions.</p>
+        <ul>
+          <li>🧩 Interests: system design, developer tooling, data visualization</li>
+          <li>🛠️ Current: strengthening DSA, refining TDD habits, learning Rust for CLIs</li>
+          <li>🌱 Open to collaborate on: open‑source utilities & performance benchmarks</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2 class="h2">At a Glance</h2>
+        <div class="grid" style="grid-template-columns: repeat(2, 1fr);">
+          <div><strong>Role</strong><div class="section-sub">Associate Engineer</div></div>
+          <div><strong>Experience</strong><div class="section-sub">1–3 years (update me)</div></div>
+          <div><strong>Availability</strong><div class="section-sub">Open to interesting opportunities</div></div>
+          <div><strong>Preferred Stack</strong><div class="section-sub">React • Node • .NET • SQL • Azure</div></div>
+        </div>
+        <div class="chips" style="margin-top:.8rem;">
+          <span class="chip">Clean Architecture</span><span class="chip">REST & GraphQL</span><span class="chip">Testing: Jest, xUnit</span><span class="chip">Monitoring: OpenTelemetry</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="h2">Skills</h2>
+      <p class="section-sub">Core technologies and tools I use regularly.</p>
+      <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap:1rem;">
+        <div class="card"><h3>Front‑End</h3><div class="tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">Next.js</span><span class="tag">Vite</span><span class="tag">Tailwind</span><span class="tag">Accessibility</span></div></div>
+        <div class="card"><h3>Back‑End</h3><div class="tags"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">.NET 7/8</span><span class="tag">ASP.NET Core</span><span class="tag">REST</span><span class="tag">GraphQL</span><span class="tag">OAuth2/JWT</span><span class="tag">gRPC</span></div></div>
+        <div class="card"><h3>Data & Cloud</h3><div class="tags"><span class="tag">SQL Server</span><span class="tag">PostgreSQL</span><span class="tag">MongoDB</span><span class="tag">Redis</span><span class="tag">Azure</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">CI/CD</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <h2 class="h2">Experience</h2>
+      <p class="section-sub">What I’ve worked on and the impact delivered.</p>
+      <ol class="timeline">
+        <li class="tl-item card"><span class="tl-bullet"></span><h3>Associate Engineer · Your Company</h3><div class="section-sub">MM YYYY — Present</div><ul><li>Built and maintained services in <strong>.NET</strong> and <strong>Node.js</strong> powering customer‑facing features used by 10k+ users.</li><li>Improved query performance by <strong>35%</strong> via indexing and caching (Redis).</li><li>Established CI pipelines (Azure DevOps) cutting deployment time from 20m to <strong>6m</strong>.</li><li>Drove structured logging + traces (OpenTelemetry), decreasing MTTR by <strong>25%</strong>.</li></ul></li>
+        <li class="tl-item card"><span class="tl-bullet"></span><h3>Software Engineer Intern · Another Org</h3><div class="section-sub">MM YYYY — MM YYYY</div><ul><li>Shipped a React + ASP.NET Core module, increasing onboarding speed by <strong>~18%</strong>.</li><li>Improved integration test coverage from 42% to <strong>76%</strong>.</li></ul></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="h2">Projects</h2>
+      <p class="section-sub">Click a filter to narrow down.</p>
+      <div class="filters" role="tablist" aria-label="Project filters">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="web" aria-pressed="false">Web</button>
+        <button class="filter" data-filter="api" aria-pressed="false">API</button>
+        <button class="filter" data-filter="data" aria-pressed="false">Data</button>
+        <button class="filter" data-filter="cloud" aria-pressed="false">Cloud</button>
+      </div>
+      <div class="projects">
+        <article class="proj card" data-tags="web,api"><div class="thumb">Full‑stack Task Manager</div><h3>TaskFlow — React · Node · PostgreSQL</h3><div class="section-sub">Realtime Kanban with roles & offline sync.</div><div class="tags"><span class="tag">React</span><span class="tag">Node</span><span class="tag">Postgres</span></div><div class="links"><a class="btn" href="#" data-open="p1">Details</a><a class="btn secondary" href="https://github.com/your-github/taskflow" target="_blank" rel="noopener">Code</a></div></article>
+        <article class="proj card" data-tags="api,cloud"><div class="thumb">Payments API</div><h3>PayLite — .NET 8 · DDD · Azure</h3><div class="section-sub">Idempotency, retries, observability built‑in.</div><div class="tags"><span class="tag">.NET</span><span class="tag">DDD</span><span class="tag">Azure</span></div><div class="links"><a class="btn" href="#" data-open="p2">Details</a><a class="btn secondary" href="https://github.com/your-github/paylite" target="_blank" rel="noopener">Code</a></div></article>
+        <article class="proj card" data-tags="data,web"><div class="thumb">Analytics Dashboard</div><h3>Pulse — Next.js · Charts</h3><div class="section-sub">SSR + caching for fast analytics UI.</div><div class="tags"><span class="tag">Next.js</span><span class="tag">SSR</span><span class="tag">SQL</span></div><div class="links"><a class="btn" href="#" data-open="p3">Details</a><a class="btn secondary" href="https://github.com/your-github/pulse" target="_blank" rel="noopener">Code</a></div></article>
+        <article class="proj card" data-tags="web"><div class="thumb">UI Component Library</div><h3>FeatherUI — TypeScript · A11y</h3><div class="section-sub">Headless, accessible components.</div><div class="tags"><span class="tag">TypeScript</span><span class="tag">Jest</span><span class="tag">ARIA</span></div><div class="links"><a class="btn" href="#" data-open="p4">Details</a><a class="btn secondary" href="https://github.com/your-github/featherui" target="_blank" rel="noopener">Code</a></div></article>
+        <article class="proj card" data-tags="cloud,api"><div class="thumb">Serverless Image Pipeline</div><h3>Imager — Azure Functions</h3><div class="section-sub">On‑demand image processing + CDN.</div><div class="tags"><span class="tag">Azure Functions</span><span class="tag">CDN</span></div><div class="links"><a class="btn" href="#" data-open="p5">Details</a></div></article>
+        <article class="proj card" data-tags="data"><div class="thumb">ETL / Data Quality</div><h3>DataClean — Python · GE</h3><div class="section-sub">Declarative checks + alerts.</div><div class="tags"><span class="tag">Python</span><span class="tag">Airflow</span></div><div class="links"><a class="btn" href="#" data-open="p6">Details</a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Modals -->
+  <dialog id="p1"><div class="modal"><header class="grid" style="grid-template-columns:1fr auto;align-items:center;"><h3>TaskFlow — Full‑stack Task Manager</h3><button class="btn secondary" data-close>Close</button></header><div class="content" style="padding:1rem;" ><p>Realtime Kanban built with React + Node + Postgres. Features drag & drop, optimistic updates, role‑based access, and offline sync.</p></div></div></dialog>
+  <dialog id="p2"><div class="modal"><header class="grid" style="grid-template-columns:1fr auto;align-items:center;"><h3>PayLite — .NET Payments API</h3><button class="btn secondary" data-close>Close</button></header><div class="content" style="padding:1rem;" ><p>Minimal payments gateway with DDD aggregates, outbox pattern, retries, and idempotency keys. Distributed tracing via OpenTelemetry.</p></div></div></dialog>
+  <dialog id="p3"><div class="modal"><header class="grid" style="grid-template-columns:1fr auto;align-items:center;"><h3>Pulse — Analytics Dashboard</h3><button class="btn secondary" data-close>Close</button></header><div class="content" style="padding:1rem;" ><p>Next.js dashboard with SSR, ISR, and per‑query caching. RLS via Postgres.</p></div></div></dialog>
+  <dialog id="p4"><div class="modal"><header class="grid" style="grid-template-columns:1fr auto;align-items:center;"><h3>FeatherUI — Component Library</h3><button class="btn secondary" data-close>Close</button></header><div class="content" style="padding:1rem;" ><p>Headless components with a11y‑first design, full keyboard support, and comprehensive tests.</p></div></div></dialog>
+  <dialog id="p5"><div class="modal"><header class="grid" style="grid-template-columns:1fr auto;align-items:center;"><h3>Imager — Serverless Pipeline</h3><button class="btn secondary" data-close>Close</button></header><div class="content" style="padding:1rem;" ><p>On‑the‑fly image transformation with Azure Functions; caching, signed URLs, and CDN edge rules.</p></div></div></dialog>
+  <dialog id="p6"><div class="modal"><header class="grid" style="grid-template-columns:1fr auto;align-items:center;"><h3>DataClean — Data Quality</h3><button class="btn secondary" data-close>Close</button></header><div class="content" style="padding:1rem;" ><p>ETL checks with Great Expectations; automated validation and Slack notifications.</p></div></div></dialog>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="container grid cols-2">
+      <div class="card"><h2 class="h2">Education</h2><ul><li><strong>B.Tech / B.E.</strong> in Computer Science — Your University (YYYY)</li><li>Relevant Coursework: DSA, DBMS, OS, Networks, OOP</li></ul></div>
+      <div class="card"><h2 class="h2">Certifications</h2><ul><li>Azure Fundamentals (AZ‑900)</li><li>Azure Developer Associate (AZ‑204)</li></ul></div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="container">
+      <h2 class="h2">Testimonials</h2>
+      <div class="grid" style="grid-template-columns:1fr 1fr;">
+        <blockquote class="card">“Sudheer quickly turns ideas into robust features, with a keen eye for details and performance.” — <strong>Tech Lead</strong></blockquote>
+        <blockquote class="card">“Dependable, collaborative, and always improving. A strong engineer to have on the team.” — <strong>Manager</strong></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT + LOCATION SIDE-BY-SIDE -->
+  <section id="contact">
+    <div class="container grid cols-2">
+      <!-- Contact Card -->
+      <div class="card">
+        <h2 class="h2">Contact</h2>
+        <p class="section-sub">Let’s build something great together.</p>
+        <form id="contactForm" aria-label="Contact form">
+          <label><span>Name</span><input id="nameInput" name="name" placeholder="Your name" required /></label>
+          <label><span>Email</span><input id="emailInput" type="email" name="email" placeholder="you@gmail.com" required /></label>
+          <label><span>Message</span><textarea name="message" placeholder="How can I help?" required></textarea></label>
+          <div class="actions"><button type="submit" class="btn">Send</button><button type="reset" class="btn secondary">Reset</button></div>
+          <p id="formStatus" class="section-sub" role="status" aria-live="polite"></p>
+        </form>
+        <hr style="border:0;border-top:1px solid color-mix(in oklab, var(--muted) 45%, transparent); margin:1rem 0"/>
+        <h3 style="margin:.2rem 0 0">Quick Links</h3>
+        <ul>
+          <li>📄 <a id="resumeLink" href="#" onclick="if(this.getAttribute('href')==='#'){alert('Upload your PDF resume in Edit ▶ Resume to enable this link.');}" download>Download Resume (PDF)</a></li>
+          <li>💼 <a id="linkedinLink" href="https://www.linkedin.com/in/sudheer-kumar-reddy-a-097283162" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li>🐙 <a id="githubLink" href="https://github.com/your-github" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+        <p class="section-sub">Gmail: <a id="emailLink" href="mailto:you@gmail.com">you@gmail.com</a></p>
+        <div class="actions"><button class="btn secondary" id="copyEmail" type="button">Copy Email</button></div>
+      </div>
+
+      <!-- Location Card -->
+      <div class="card">
+        <h2 class="h2">Location</h2>
+        <p class="section-sub">Based in <strong id="locationText">Hyderabad, India</strong>.</p>
+        <div class="map-wrap"><iframe id="mapFrame" title="Location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src=""></iframe></div>
+        <div class="actions" style="margin-top:.8rem;"><a class="btn secondary" id="openMaps" href="#" target="_blank" rel="noopener">Open in Google Maps</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SETTINGS (Edit) -->
+  <dialog id="settings">
+    <div class="modal">
+      <header class="grid" style="grid-template-columns:1fr auto; align-items:center;">
+        <h3>Profile Settings</h3>
+        <button class="btn secondary" data-close aria-label="Close">Close</button>
+      </header>
+      <div class="content" style="padding:1rem; display:grid; gap:1rem;">
+        <div class="card"><h4>Owner PIN</h4><p class="section-sub">Optional simple lock for this editor (local to your browser).</p><div class="grid" style="grid-template-columns: 1fr 1fr; gap:.6rem;"><label><span>Set / Change PIN</span><input id="set_pin" type="password" placeholder="4–8 digits" maxlength="8" /></label><button id="savePin" class="btn" type="button">Save PIN</button></div></div>
+        <div class="card"><h4>Basics</h4><div class="grid" style="grid-template-columns: 1fr 1fr;"><label><span>Name</span><input id="set_name" placeholder="Your name" /></label><label><span>Title</span><input id="set_title" placeholder="Your title" /></label></div></div>
+        <div class="card"><h4>Contact & Socials</h4><div class="grid" style="grid-template-columns: 1fr 1fr;"><label><span>Gmail</span><input id="set_email" placeholder="you@gmail.com" /></label><label><span>GitHub</span><input id="set_github" placeholder="https://github.com/username" /></label><label><span>LinkedIn</span><input id="set_linkedin" placeholder="https://linkedin.com/in/username" /></label><label><span>X (Twitter)</span><input id="set_x" placeholder="https://x.com/username" /></label><label><span>Instagram</span><input id="set_instagram" placeholder="https://instagram.com/username" /></label><label><span>Website/Blog</span><input id="set_website" placeholder="https://your-site.com" /></label></div></div>
+        <div class="card"><h4>Location</h4><label><span>Address / Area</span><input id="set_location" placeholder="City, Area, Landmark" /></label><div class="actions" style="margin-top:.5rem"><button id="applyLocation" class="btn">Apply to Map</button></div></div>
+        <div class="card"><h4>Avatar (Profile Picture)</h4><p class="section-sub">Upload a square image. Stored locally in your browser.</p><input id="avatarUpload" type="file" accept="image/*" /><div class="actions"><button id="removeAvatar" class="btn secondary" type="button">Remove</button></div></div>
+        <div class="card"><h4>Resume</h4><p class="section-sub">Upload a PDF (session‑only) or set an external URL.</p><input id="resumeUpload" type="file" accept="application/pdf" /><label><span>External Resume URL</span><input id="set_resume_url" placeholder="https://.../resume.pdf" /></label><div class="actions"><button id="clearResume" class="btn secondary" type="button">Clear</button></div></div>
+        <div class="actions" style="justify-content:flex-end; display:flex; gap:.5rem;"><button class="btn secondary" data-close>Close</button><button id="saveSettings" class="btn">Save</button></div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container grid" style="grid-template-columns: 1fr auto; align-items: center;">
+      <div>© <span id="year"></span> Sudheer Kumar Reddy Arem. All rights reserved.</div>
+      <a id="backToTop" class="btn secondary" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    const $ = (s, r=document) => r.querySelector(s);
+    const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
+
+    // Theme
+    const body = document.body; const themeToggle = $('#themeToggle'); const savedTheme = localStorage.getItem('theme'); if (savedTheme === 'light') body.classList.add('light');
+    themeToggle?.addEventListener('click', () => { body.classList.toggle('light'); localStorage.setItem('theme', body.classList.contains('light') ? 'light' : 'dark'); });
+
+    // Active nav
+    const sections = ['about','skills','experience','projects','education','testimonials','contact'].map(id => document.getElementById(id));
+    const navLinks = Array.from(document.querySelectorAll('nav a'));
+    const io = new IntersectionObserver(entries => { entries.forEach(e => { const link = navLinks.find(a => a.getAttribute('href') === `#${e.target.id}`); if (e.isIntersecting) { navLinks.forEach(a => a.classList.remove('active')); link?.classList.add('active'); } }) }, { rootMargin: '-40% 0px -55% 0px', threshold: 0.01 });
+    sections.forEach(s => s && io.observe(s));
+
+    // Year
+    $('#year').textContent = new Date().getFullYear();
+
+    // Socials (Gmail emphasis)
+    const SOCIALS = [
+      { key: 'gmail', label: 'Gmail', icon: `<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#EA4335" d="M2 6l10 7 10-7v11a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/><path fill="#FBBC05" d="M2 6l10 7V6z"/><path fill="#34A853" d="M22 6l-10 7V6z"/><path fill="#C5221F" d="M2 6l4-3h12l4 3-10 7z"/></svg>` },
+      { key: 'github', label: 'GitHub', icon: `<svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12 11.5 11.5 0 0 0 8 23.1c.6.1.8-.2.8-.5v-2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.3-1.8-1.3-1.8-1.1-.7 0-.7 0-.7 1.3.1 2 .9 2 .9 1.2 2 3.1 1.4 3.8 1.1.1-.8.5-1.4.9-1.7-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.4 1.2a11.6 11.6 0 0 1 6.1 0c2.4-1.5 3.4-1.2 3.4-1.2.6 1.6.2 2.9.1 3.2.8.9 1.2 2 1.2 3.3 0 4.6-2.7 5.5-5.3 5.9.5.4.9 1.1.9 2.2v3.2c0 .3.2.6.8.5A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>` },
+      { key: 'linkedin', label: 'LinkedIn', icon: `<svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.8v2h.1c.5-.9 1.9-2.1 3.9-2.1C20 8.4 23 10.6 23 15v8h-4v-7c0-1.7-.1-3.9-2.4-3.9-2.4 0-2.7 1.8-2.7 3.8V23h-4V8.5z"/></svg>` },
+    ];
+
+    function loadSettings() {
+      const DEFAULTS = { name:'Sudheer Kumar Reddy Arem', title:'Associate Engineer', email:'you@gmail.com', github:'https://github.com/your-github', linkedin:'https://www.linkedin.com/in/sudheer-kumar-reddy-a-097283162', x:'', instagram:'', website:'', location:'Hyderabad, India', avatarDataUrl:'', resumeUrl:'', pin:'' };
+      try { return { ...DEFAULTS, ...JSON.parse(localStorage.getItem('portfolio_settings') || '{}') }; } catch { return { ...DEFAULTS }; }
+    }
+    function saveSettings(s){ localStorage.setItem('portfolio_settings', JSON.stringify(s)); renderFromSettings(); }
+
+    function buildSocials(){ const data = loadSettings(); const socialsEl = $('#socials'); socialsEl.innerHTML='';
+      if (data.email) { const a = document.createElement('a'); a.href = `mailto:${data.email}`; a.innerHTML = `${SOCIALS[0].icon}<span>Gmail</span>`; socialsEl.appendChild(a); }
+      if (data.github) { const a = document.createElement('a'); a.href = data.github; a.target='_blank'; a.rel='noopener'; a.innerHTML = `${SOCIALS[1].icon}<span>GitHub</span>`; socialsEl.appendChild(a); }
+      if (data.linkedin) { const a = document.createElement('a'); a.href = data.linkedin; a.target='_blank'; a.rel='noopener'; a.innerHTML = `${SOCIALS[2].icon}<span>LinkedIn</span>`; socialsEl.appendChild(a); }
+    }
+
+    function renderFromSettings(){ const s = loadSettings();
+      const brandName = $('.brand-name'); if (brandName) brandName.textContent = s.name || 'Sudheer Kumar Reddy Arem';
+      const titleEl = document.querySelector('.title'); if (titleEl) titleEl.innerHTML = `Hi, I’m <span style=\"color:var(--brand)\">${(s.name||'Sudheer').split(' ')[0]}</span> — <span class=\"nowrap\">${s.title}</span> building reliable web & cloud solutions.`;
+
+      // Do NOT prefill Contact inputs (per request)
+      // Keep placeholders only
+
+      // Update Quick links & socials
+      $('#githubLink').href = s.github || '#'; $('#linkedinLink').href = s.linkedin || '#';
+      buildSocials();
+
+      // Location
+      const loc = s.location || 'Hyderabad, India'; $('#locationText').textContent = loc; updateMap(loc); $('#openMaps').href = `https://www.google.com/maps?q=${encodeURIComponent(loc)}`;
+
+      // Avatar
+      const img = $('#avatarImg'); const fallback = $('#avatarFallback'); if (s.avatarDataUrl) { img.src = s.avatarDataUrl; img.style.display='block'; fallback.style.display='none'; } else { img.removeAttribute('src'); img.style.display='none'; fallback.style.display='block'; }
+
+      // Resume
+      const resumeLink = $('#resumeLink'); resumeLink.href = s.resumeUrl || '#';
+
+      // Email link in Contact section
+      const emailLink = $('#emailLink'); emailLink.href = `mailto:${s.email}`; emailLink.textContent = s.email;
+    }
+
+    // Contact form
+    const form = $('#contactForm'); const status = $('#formStatus');
+    form?.addEventListener('submit', (e)=>{ e.preventDefault(); const fd = new FormData(form); const name = fd.get('name'); const email = fd.get('email'); const message = fd.get('message'); const to = $('#emailLink').getAttribute('href').replace('mailto:',''); const subject = encodeURIComponent(`Portfolio contact from ${name||'Visitor'}`); const body = encodeURIComponent(`From: ${name||''} <${email||''}>\n\n${message||''}`); window.location.href = `mailto:${to}?subject=${subject}&body=${body}`; status.textContent='Thanks! Your email client should open now.'; form.reset(); });
+    $('#copyEmail')?.addEventListener('click', async ()=>{ const email = $('#emailLink').textContent.trim(); try{ await navigator.clipboard.writeText(email); alert('Email copied to clipboard'); }catch{} });
+
+    // Map
+    function updateMap(address){ const frame = $('#mapFrame'); if (!address){ frame.src=''; return; } frame.src = `https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed`; }
+
+    // Settings modal + PIN guard
+    const settingsDlg = $('#settings'); const settingsBtn = $('#settingsBtn');
+    settingsBtn?.addEventListener('click', ()=>{
+      const s = loadSettings();
+      if (s.pin){ const entered = prompt('Enter owner PIN to edit'); if (entered !== s.pin) { alert('Incorrect PIN'); return; } }
+      settingsDlg.showModal();
+      $('#set_name').value = s.name; $('#set_title').value = s.title; $('#set_email').value = s.email; $('#set_github').value = s.github; $('#set_linkedin').value = s.linkedin; $('#set_x').value = s.x; $('#set_instagram').value = s.instagram; $('#set_website').value = s.website; $('#set_location').value = s.location; $('#set_resume_url').value = s.resumeUrl; $('#set_pin').value = '';
+    });
+    $$('[data-close]', settingsDlg).forEach(el => el.addEventListener('click', ()=> settingsDlg.close()));
+
+    $('#savePin')?.addEventListener('click', ()=>{ const s = loadSettings(); const v = $('#set_pin').value.trim(); if (v && !/^\d{4,8}$/.test(v)) { alert('PIN must be 4–8 digits'); return; } s.pin = v; saveSettings(s); alert(v ? 'PIN set.' : 'PIN cleared.'); });
+
+    $('#applyLocation')?.addEventListener('click', ()=>{ const addr = $('#set_location').value.trim(); const s = loadSettings(); s.location = addr || 'Hyderabad, India'; saveSettings(s); });
+
+    $('#saveSettings')?.addEventListener('click', ()=>{
+      const s = loadSettings();
+      s.name = $('#set_name').value || s.name; s.title = $('#set_title').value || s.title; s.email = $('#set_email').value || s.email; s.github = $('#set_github').value || ''; s.linkedin = $('#set_linkedin').value || ''; s.x = $('#set_x').value || ''; s.instagram = $('#set_instagram').value || ''; s.website = $('#set_website').value || ''; s.location = $('#set_location').value || 'Hyderabad, India'; s.resumeUrl = $('#set_resume_url').value || s.resumeUrl; saveSettings(s); settingsDlg.close(); });
+
+    // Avatar upload (visible, larger)
+    $('#avatarUpload')?.addEventListener('change', (e)=>{ const file = e.target.files?.[0]; if (!file) return; const img = new Image(); img.onload = ()=>{ const canvas = document.createElement('canvas'); const max=800; const scale = Math.min(max/img.width, max/img.height); canvas.width = Math.round(img.width*scale); canvas.height = Math.round(img.height*scale); const ctx = canvas.getContext('2d'); ctx.fillStyle = '#111827'; ctx.fillRect(0,0,canvas.width,canvas.height); ctx.drawImage(img,0,0,canvas.width,canvas.height); const dataUrl = canvas.toDataURL('image/jpeg',0.95); const s=loadSettings(); s.avatarDataUrl=dataUrl; saveSettings(s); }; img.src = URL.createObjectURL(file); });
+    $('#removeAvatar')?.addEventListener('click', ()=>{ const s = loadSettings(); s.avatarDataUrl=''; saveSettings(s); });
+
+    // Resume upload
+    let resumeBlobUrl=''; $('#resumeUpload')?.addEventListener('change', (e)=>{ const file = e.target.files?.[0]; if (!file) return; if (resumeBlobUrl) URL.revokeObjectURL(resumeBlobUrl); resumeBlobUrl = URL.createObjectURL(file); const s = loadSettings(); s.resumeUrl = resumeBlobUrl; saveSettings(s); alert('Resume uploaded (works this session). For a permanent link, set an external URL.'); }); $('#clearResume')?.addEventListener('click', ()=>{ const s = loadSettings(); s.resumeUrl=''; saveSettings(s); });
+
+    // Filters
+    const filterButtons = document.querySelectorAll('.filter'); const projectCards = document.querySelectorAll('.proj');
+    function applyFilter(tag){ filterButtons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.filter === tag))); projectCards.forEach(card => { const tags = (card.dataset.tags||'').split(/[ ,]+/).filter(Boolean); const show = tag==='all' || tags.includes(tag); if (!show) card.setAttribute('hidden',''); else card.removeAttribute('hidden'); }); }
+    filterButtons.forEach(btn => btn.addEventListener('click', ()=> applyFilter(btn.dataset.filter)) ); applyFilter('all');
+
+    // Modals
+    document.querySelectorAll('[data-open]').forEach(el => el.addEventListener('click', (e)=>{ e.preventDefault(); const id = el.getAttribute('data-open'); const dlg = document.getElementById(id); if (dlg && typeof dlg.showModal==='function') dlg.showModal(); }));
+    document.querySelectorAll('[data-close]').forEach(el => el.addEventListener('click', ()=>{ const dlg = el.closest('dialog'); dlg?.close(); }));
+
+    // Init
+    renderFromSettings();
+  </script>
+</body>
+</html>
